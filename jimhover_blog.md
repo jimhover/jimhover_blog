@@ -30,6 +30,23 @@ grant all on *.* to 'root'@'%';
 
 flush privileges;
 
+
+
+创建数据库，创建表，写入值：
+
+create table wish
+(
+id int,
+name varchar(20),
+content varchar(500),
+created_at timestamp,
+updated_at timestamp
+);
+
+insert wish (id,name,content,created_at,updated_at) values(1,'jimhover','good boy','2020-06-28 22:30:30','2020-06-28 22:30:00');
+
+
+
 第三阶段：Gulp +Webpack+Jasmine & Karma
 
 第四阶段：JQuery / Bootstrap / Vue.js /React / Angular
