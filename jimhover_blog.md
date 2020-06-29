@@ -43,9 +43,19 @@ created_at timestamp,
 updated_at timestamp
 );
 
-insert wish (id,name,content,created_at,updated_at) values(1,'jimhover','good boy','2020-06-28 22:30:30','2020-06-28 22:30:00');
+insert wish (id,name,content,created_at,updated_at) values(2,'vicent_jason','愿你是个勇敢的人','2020-06-28 22:30:30','2020-06-28 22:30:00');
 
 
+
+Express 修改之后自动加载需要安装nodedemon npm install -g nodemon
+
+修改package.json 
+
+"scripts": {
+
+​    "start": "nodemon ./bin/www"
+
+  },
 
 第三阶段：Gulp +Webpack+Jasmine & Karma
 
