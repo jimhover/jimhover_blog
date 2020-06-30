@@ -4,9 +4,9 @@
 
 前端需要学习的知识：
 
-第一阶段：javascript+html+css
+## 第一阶段：javascript+html+css
 
-第二阶段：nodejs+express+Mongoose 
+## 第二阶段：nodejs+express+Mongoose 
 
 node主要特点：事件驱动、非阻塞、异步 I/O，高并发
 
@@ -18,7 +18,7 @@ http request常见参数：路径参数、请求参数、cookie，requestbody，
 
 http response常见参数：status，content-type，redirect
 
-实现个人心愿墙：
+### 实现个人心愿墙
 
 数据库创建：
 
@@ -56,6 +56,38 @@ Express 修改之后自动加载需要安装nodedemon npm install -g nodemon
 ​    "start": "nodemon ./bin/www"
 
   },
+
+
+
+### 增加后台管理功能
+
+创建用户表
+
+```
+create table admin(
+
+id int,
+
+username varchar(50),
+
+Password varchar(50),
+
+name varchar(50),
+
+role int,
+
+last_login_at timestamp,
+
+created_at timestamp,
+
+updated_at timestamp ,
+
+primary key(id)
+
+);
+```
+
+insert admin (id, username,password, name, role, last_login_at, created_at,updated_at) values (1, 'jimhover','jimhover@123','jimhover',1,'2020-07-01 00:00:00','2020-07-01 00:00:00','2020-07-01 00:00:00');
 
 第三阶段：Gulp +Webpack+Jasmine & Karma
 
