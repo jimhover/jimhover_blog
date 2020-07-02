@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 var wishRouter = require('./routes/wish');
 var adminRouter= require('./routes/admin');
 
+const verifyMiddleware=require('./routes/middlerware/verify');
+
 var app = express();
 
 // view engine setup
@@ -23,8 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/wish',wishRouter);
-app.use('/admin',adminRouter);
+app.use('/wish', verifyMiddleware.verifyToken, wishRouter);
+app.use('/admin', verifyMiddleware.verifyToken, adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
