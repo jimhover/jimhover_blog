@@ -3,7 +3,7 @@ const tokenKey='root@123';
 
 const token={
     encrypt: function(data,time){
-        return jwt.sign(data,token,{expiresIn: time});
+        return jwt.sign({data:data},tokenKey,{expiresIn: 60});
     },
 
     decrypt: function(token){

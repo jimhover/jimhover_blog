@@ -5,10 +5,8 @@ var router = express.Router();
 const IndexController=require('../controller/index');
 router.post('/login',IndexController.login);
 
-/* GET home page. 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Hello index' });
 });
-*/
 
 module.exports = router;

@@ -49,7 +49,7 @@ function checkParams(params, checkArr,cb){
 
 function autoFn(tasks,res,resObj){ 
     async.auto(tasks,function(err){
-        if(!!e){
+        if(!!err){
             console.log(JSON.stringify(err));
             res.json({
                 code: err.code || Constant.DEFAULT_ERROR.code,

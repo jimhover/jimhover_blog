@@ -13,13 +13,13 @@ function login(req,res){
     const resObj=Common.clone(Constant.DEFAULT_SUCCESS);
     let tasks={
         checkParams: (cb)=>{
-            Common.checkParams(req.body,['username','passowrd'],cb);
+            Common.checkParams(req.body,['username','password'],cb);
         },
         query: ['checkParams', (result,cb) =>{
             AdminModel.findOne({
                 where:{
                     username: req.body.username,
-                    passowrd: req.body.passowrd
+                    password: req.body.password
                 }
             })
             .then(function (result){
@@ -35,7 +35,8 @@ function login(req,res){
                     const adminInfo={
                         id: result.id
                     };
-                    let token=Token.encrypt(adminInfo,TOKEN_EXPIRE_SECOND);
+                    console.log("adminInfo........."+ JSON.stringify(adminInfo));
+                    let token=Token.encrypt(""+adminInfo.id,TOKEN_EXPIRE_SECOND);
                     resObj.data.token=token;
                     cb(null,result.id);
                 }else{

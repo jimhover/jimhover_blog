@@ -26,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/wish', verifyMiddleware.verifyToken, wishRouter);
+// app.use('/wish', wishRouter);
 app.use('/admin', verifyMiddleware.verifyToken, adminRouter);
 
 // catch 404 and forward to error handler

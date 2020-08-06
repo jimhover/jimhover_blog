@@ -1,10 +1,8 @@
 
 let exportObj={
-    list,
-    info,
-    add,
-    update,
-    remove
+    list
 };
 
 module.exports=exportObj;
+
+function list(){}

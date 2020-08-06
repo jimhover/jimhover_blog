@@ -89,6 +89,8 @@ primary key(id)
 
 insert admin (id, username,password, name, role, last_login_at, created_at,updated_at) values (1, 'jimhover','jimhover@123','jimhover',1,'2020-07-01 00:00:00','2020-07-01 00:00:00','2020-07-01 00:00:00');
 
+
+
 第三阶段：Gulp +Webpack+Jasmine & Karma
 
 第四阶段：JQuery / Bootstrap / Vue.js /React / Angular
