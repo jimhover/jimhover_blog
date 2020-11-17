@@ -11,7 +11,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          I love <Link  href="/posts/first-post"><a >kota cat home!</a></Link>
+          I love <Link  href="./posts/first-post"><a >kota cat home!</a></Link>
         </h1>
 
         <p className="description">
