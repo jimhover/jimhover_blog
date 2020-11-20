@@ -7,7 +7,7 @@ export default function FitstPost(){
     return (
         <Layout>
         <Head>
-            <title>first page demo</title>
+            <title>Cat Kota</title>
         </Head>
         <h1>First Page</h1>
         <h2>
