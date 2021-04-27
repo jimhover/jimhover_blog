@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 export default function Head(props) {
     // 'home', 'thought', 'blog', 'ablout'
     const menus = [{ menu: 'home', path: '/home' }, { menu: 'blog', path: '/blog-list' }];
-    return (g
+    return (
         <div className='Head'>
             {
                 menus.map(item => (
