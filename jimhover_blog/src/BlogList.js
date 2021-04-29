@@ -1,9 +1,40 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export default function BlogList(){
-    return(
-       <div>
-           <Link to='/'>hello blog list</Link>
+export default function BlogList() {
+    const [blogs, setBlogs] = useState(new Array());
+
+    const getData = async () => {
+        const res = await fetch(blogDataUrl, {
+            method: 'GET'
+        })
+            .then(res => res.json())
+            .then(data => {
+                setBlogs(data);
+            }
+            );
+    }
+    const blogDataUrl = 'http://localhost:3001/blogs';
+
+    useEffect(() => {
+        getData();
+    }, []);
+    return (
+        <div>
+            <Link to='/'>home</Link>
+            <div>
+                {
+                    blogs.map(item => {
+                        console.log(item.id);
+                        return (
+                            <div>
+                                <h2>{item.title}</h2>
+                                <p>{item.content}</p>
+                            </div>
+                        )
+
+                    })}
+            </div>
         </div>
-    )
+    );
 }
